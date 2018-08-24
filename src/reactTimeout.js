@@ -87,7 +87,7 @@ var createReactTimeout = function (React) {
             {},
             this.props,
             {
-              ref: function (component) { this.wrappedInstance = component; }.bind(this),
+              ref: component => this.props.innerRef,
               setTimeout: this.setTimeout,
               clearTimeout: this.clearTimeout,
 
